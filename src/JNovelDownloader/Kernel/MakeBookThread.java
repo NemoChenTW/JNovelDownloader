@@ -279,6 +279,9 @@ public class MakeBookThread extends Thread {
 							// bookData.append("\r\n");
 							// flag=true;
 							// }
+							if (temp.matches("第[一二三四五六七八九十百零1234567890 　]*章 [^<>]*")) {
+								temp = "@TITLE@ " + temp;
+							}
 							bookData.append(temp);
 							// 如果有
 							// 會有內容，如果沒有是空字串
